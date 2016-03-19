@@ -10,7 +10,7 @@ print("Content-Type: text/html\n")
 
 def entryPoint():
 	form = cgi.FieldStorage()
-    print(form)
+	print(form)
 
     db = MySQLdb.connect(host="localhost", # your host, usually localhost
                      user="daniel", # your username
