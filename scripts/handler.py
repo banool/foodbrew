@@ -39,12 +39,20 @@ def loginForm(dbObj):
 
 
 def getSupplierGrid(dbObj):
-    dbObj.execute("SELECT user_id, name, photo FROM User")
+    dbObj.execute("SELECT user_id, name, photo FROM User WHERE user_id IN (SELECT supplier_id FROM Supplier);")
     userData = dbObj.fetchall()
 
     for item in userData:
         square = """<div class="column"><a href="/thinkers?id=%s"><img class="thumbnail" width=450px height=450px src="%s"><h5 style="text-align:center">%s</h5></div> """ % (item[0], item[2], item[1])
         print(square*7)
+
+def getCharitiesGrid3(dbObj):
+    dbObj.execute("SELECT user_id, name, photo FROM User WHERE user_id IN (SELECT collector_id FROM Collector) LIMIT 3")
+    userData = dbObj.fetchall()
+
+    for item in userData:
+        square = """<div class="column"><a href="/thinkers?id=%s"><img class="thumbnail" width=450px height=450px src="%s"><h5 style="text-align:center">%s</h5></div> """ % (item[0], item[2], item[1])
+        print(square)
 
 def getSupplierNamePhoto(dbObj, form):
     supplierID = form["supplierID"].value
