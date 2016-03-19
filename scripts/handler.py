@@ -21,7 +21,7 @@ def entryPoint():
         if action == "login":
             loginForm(dbObj)
         elif action == "getSupplierGrid":
-            getSupplierGrid()
+            getSupplierGrid(dbObj)
         elif action == "formData":
             info = prepareInfo(dbObj, form)
             if info == False:
