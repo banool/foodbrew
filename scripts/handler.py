@@ -29,7 +29,6 @@ def entryPoint():
                 exit()
             else:
                 makeQuery(dbObj, info)
-
             else:
                 print("An unexpected request was received, exiting.")
                 exit()
@@ -40,7 +39,7 @@ def entryPoint():
 
         db.commit()
 
-        def loginForm():
-            print("Hey IT'S ME")
+def loginForm():
+    print("Hey IT'S ME")
 
-            entryPoint()
+    entryPoint()
