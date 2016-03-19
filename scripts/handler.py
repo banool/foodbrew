@@ -21,14 +21,12 @@ def entryPoint():
             loginForm(dbObj)
         elif action == "getSupplierGrid":
             getSupplierGrid(dbObj)
-        elif action == "formData":
-            info = prepareInfo(dbObj, form)
-            if info == False:
-                # Exiting if it didn't work properly.
-                exit()
-            else:
-                print("An unexpected request was received, exiting.")
-                exit()
+        elif action == "getSupplierNamePhoto":
+            getSupplierNamePhoto(dbObj, form)
+        elif action == "getSupplierDescription":
+            getSupplierDescription(dbObj, form)
+        else:
+            print("???")
     except KeyError:
         print("<h1>Woops!</h1>")
         print("<p>Looks like you've come straight to this page without actually making an entry!</p>")
@@ -48,7 +46,15 @@ def getSupplierGrid(dbObj):
         square = """<div class="column"><a href="/thinkers?id=%s"><img class="thumbnail" width=450px height=450px src="%s"><h5 style="text-align:center">%s</h5></div> """ % (item[0], item[2], item[1])
         print(square*7)
 
-def getSupplierName(dbObj):
+def getSupplierNamePhoto(dbObj, form):
+    supplierID = form["supplierID"].value
+    dbObj.execute("SELECT photo, name FROM User WHERE user_id=%s" % supplierID)
+    userData = dbObj.fetchall()
+
+    print("""<img class="thumbnail" src="%s" style="display: inline-block; margin-right:20px">
+    <h1 style="display: inline-block;" id="supplierName">%s</h1>""" % (userData[0], userData[1]))
+
+def getSupplierDescription(dbObj, form):
     print("Hi")
 
 entryPoint()
