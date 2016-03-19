@@ -38,6 +38,6 @@ def entryPoint():
         db.commit()
 
 def loginForm(dbObj):
-    print("Hey IT'S ME")
+    print("Hey IT'S ME!")
 
 entryPoint()
