@@ -85,11 +85,12 @@
 
 #info {
 	background-color: #eeeeee;
-	margin-top: 10px;
+	margin-top: 40px;
 }
 
 .hiw-content {
-	margin-top: 10px;
+	margin-top: -5px;
+	margin-bottom: 380px;
 }
 
 .footer {
@@ -132,3 +133,21 @@
 .squareBox {
 	margin-right: -30px;
 }*/
+
+.hiw-icon {
+	font-size: 100pt;
+	color: #ff9900;
+	margin-left: 120px;	
+}
+
+.connect-row {
+	top: 40%;
+	left: 50%;
+	margin-right: -46%;
+	transform: translate(-50%, -50%);
+}
+
+.connect-text {
+	margin-top: 100px;
+	margin-bottom: -40px;
+}
