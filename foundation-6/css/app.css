@@ -30,13 +30,15 @@
 
 }
 
-.orbit {
+.bgimg {
 	/*padding-bottom:-800px;*/
 	/*position: absolute;*/
 	/*width: 100%;*/
 	/*max-height: ;*/
 	/*height: 700px;*/
 	height: 60%;
+	background-image: url(file:///Users/s7even/work/src/foodbrew/foundation-6/img/img1.jpeg);
+	background-size: cover;
 	/*margin:0;*/
 	/*padding:0;*/
 }
@@ -44,4 +46,48 @@
 .grid-content {
 	background-color: white;
 	/*padding-top: -400px;*/
+}
+
+#CTA1 {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: white;
+	margin: 0;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+}
+
+#CTA2 {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: white;
+	margin: 0;
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+}
+
+#CTA3 {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: white;
+	background-color: rgba(255, 255, 255, 0.3);
+	/*outline-color: white;*/
+	margin: 0;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+}
+
+#info {
+	background-color: #eeeeee;
+	margin-top: 10px;
+}
+
+.hiw-content {
+	margin-top: 10px;
 }
