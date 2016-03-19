@@ -11,9 +11,9 @@ print("Content-Type: text/html\n")
 def entryPoint():
 	form = cgi.FieldStorage()
 	print(form)
-
-    db = MySQLdb.connect(host="localhost", user="daniel", passwd=MYSQL_pwd, db="fft")
-    dbObj = db.cursor()
+	
+	db = MySQLdb.connect(host="localhost", user="daniel", passwd=MYSQL_pwd, db="fft")
+	dbObj = db.cursor()
 
     # Ascertaining what action we're meant to perform
     try:
