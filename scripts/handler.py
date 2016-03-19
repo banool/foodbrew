@@ -49,6 +49,6 @@ def getSupplierGrid(dbObj):
         print(square)
 
 def getSupplierName(dbObj):
-
+    print("Hi")
 
 entryPoint()
