@@ -9,6 +9,13 @@
   <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
   <link rel="stylesheet" href="css/app.css" />
   <link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
+  <script>
+    function getURLParameter(name) {
+      return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+    }
+    suppID = getURLParameter('id');
+  </script>
+
 </head>
 <body>
 
@@ -25,7 +32,7 @@
 
   <script>
   $(document).ready(function(){
-      $.get("/handler", {action: "getSupplierName"}, function(data, status){
+      $.get("/handler", {action: "getSupplierName", supplierID: suppID}, function(data, status){
           document.getElementById("supplierName").innerHTML=data;
       });
   });
@@ -33,8 +40,15 @@
 
   <!-- Description of the company -->
   <div class="row" style="margin-top:10px">
-    <p style="font-size:120%" id="companyDescription">This is my super fine and dandy company dsecription. Look at me I am the best company in the whole entire universe because I am participating in this great and innovative program. Distributing food that would've been thrown out to those who need it through this super awesome web service is amazing. I love Food for Thought &#9786;.</p>
+    <p style="font-size:120%" id="supplierDescription">This is my super fine and dandy company dsecription. Look at me I am the best company in the whole entire universe because I am participating in this great and innovative program. Distributing food that would've been thrown out to those who need it through this super awesome web service is amazing. I love Food for Thought &#9786;.</p>
   </div>
+  <script>
+  $(document).ready(function(){
+      $.get("/handler", {action: "getSupplierDescription", supplierID: suppID}, function(data, status){
+          document.getElementById("supplierDescription").innerHTML=data;
+      });
+  });
+  </script>
 
   <!-- Shows the pledges -->
   <div class="row" style="margin-top:10px">
