@@ -20,30 +20,30 @@ def entryPoint():
 
     # Ascertaining what action we're meant to perform
     try:
-        action = form["action"].value
-        if action == "loginForm":
-            loginForm(dbObj)
-        elif action == "getTypes":
-            getTypes()
-        elif action == "formData":
-            info = prepareInfo(dbObj, form)
-            if info == False:
+    	action = form["action"].value
+    	if action == "loginForm":
+    		loginForm(dbObj)
+    	elif action == "getTypes":
+    		getTypes()
+    	elif action == "formData":
+    		info = prepareInfo(dbObj, form)
+    		if info == False:
                 # Exiting if it didn't work properly.
                 exit()
             else:
-                makeQuery(dbObj, info)
+            	makeQuery(dbObj, info)
 
-        else:
-            print("An unexpected request was received, exiting.")
-            exit()
+            else:
+            	print("An unexpected request was received, exiting.")
+            	exit()
     except KeyError:
-        print("<h1>Woops!</h1>")
-        print("<p>Looks like you've come straight to this page without actually making an entry!</p>")
-        print("<p>Go back to the <a href='Insert Page and try again :)")
+    	print("<h1>Woops!</h1>")
+    	print("<p>Looks like you've come straight to this page without actually making an entry!</p>")
+    	print("<p>Go back to the <a href='Insert Page and try again :)")
 
-    db.commit()
+    	db.commit()
 
-def loginForm():
-	print("Hey IT'S ME")
+    	def loginForm():
+    		print("Hey IT'S ME")
 
-entryPoint()
+    		entryPoint()
