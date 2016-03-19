@@ -56,6 +56,14 @@
           </div>
         <!-- </div> -->
         <div class="row small-up-2 medium-up-3 large-up-4">
+          <script>
+          $(document).ready(function(){
+              $.get("/handler", {action: "getSupplierGrid"}, function(data, status){
+                  document.getElementById("supplierGridTarget").innerHTML=data;
+              });
+          });
+          </script>
+          <div id="supplierGridTarget"></div>
           <div class="column">
           <a data-open="exampleModal1">
             <img class="thumbnail" src="http://placehold.it/550x550">

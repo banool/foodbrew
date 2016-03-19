@@ -18,7 +18,7 @@ def entryPoint():
     # Ascertaining what action we're meant to perform
     try:
         action = form["action"].value
-        if action == "loginForm":
+        if action == "login":
             loginForm(dbObj)
         elif action == "getTypes":
             getTypes()
@@ -39,5 +39,8 @@ def entryPoint():
 
 def loginForm(dbObj):
     print("Hey IT'S ME!!")
+
+def getSupplierGrid(dbObj):
+    print("Dis is da grid")
 
 entryPoint()
