@@ -51,10 +51,14 @@ def getSupplierNamePhoto(dbObj, form):
     dbObj.execute("SELECT photo, name FROM User WHERE user_id=%s" % supplierID)
     userData = dbObj.fetchall()
 
-    print("""<img class="thumbnail" src="%s" style="display: inline-block; margin-right:20px">
+    print("""<img class="thumbnail" src="%s" width=150px height=150px style="display: inline-block; margin-right:20px">
     <h1 style="display: inline-block;" id="supplierName">%s</h1>""" % (userData[0][0], userData[0][1]))
 
 def getSupplierDescription(dbObj, form):
-    print("Hi")
+    supplierID = form["supplierID"].value
+    dbObj.execute("SELECT description FROM User WHERE user_id=%s" % supplierID)
+    userData = dbObj.fetchall()
+
+    print(userData[0][0])
 
 entryPoint()
