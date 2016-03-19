@@ -25,6 +25,8 @@ def entryPoint():
             getSupplierNamePhoto(dbObj, form)
         elif action == "getSupplierDescription":
             getSupplierDescription(dbObj, form)
+        elif action == "getCharitiesGrid3":
+            getCharitiesGrid3(dbObj, form)
         else:
             print("???")
     except KeyError:
