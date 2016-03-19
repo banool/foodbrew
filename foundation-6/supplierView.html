@@ -32,7 +32,7 @@
 
   <script>
   $(document).ready(function(){
-      $.get("/handler", {action: "getSupplierName", supplierID: suppID}, function(data, status){
+      $.get("/handler", {action: "getSupplierName"}, function(data, status){
           document.getElementById("supplierName").innerHTML=data;
       });
   });
@@ -44,7 +44,7 @@
   </div>
   <script>
   $(document).ready(function(){
-      $.get("/handler", {action: "getSupplierDescription", supplierID: suppID}, function(data, status){
+      $.get("/handler", {action: "getSupplierDescription"}, function(data, status){
           document.getElementById("supplierDescription").innerHTML=data;
       });
   });
