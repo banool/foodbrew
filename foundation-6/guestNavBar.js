@@ -21,7 +21,7 @@ a {\
 \
           <li><input type="email" placeholder="Email"></li>\
           <li><input type="password" placeholder="Password"></li>\
-          <li><button type="submit" class="button" value="Login"></li>\
+          <li><button type="submit" class="button" value="Login">Login</button></li>\
 \
         </ul>\
       </form>\
