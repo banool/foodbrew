@@ -42,7 +42,7 @@ def loginForm(dbObj):
 
 
 def getSupplierGrid(dbObj):
-    dbObj.execute("SELECT name, image FROM User")
+    dbObj.execute("SELECT name FROM User")
     userData = dbObj.fetchall()
 
     for item in userData:
