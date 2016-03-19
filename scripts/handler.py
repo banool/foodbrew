@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import cgitb, cgi
 cgitb.enable()
 import MySQLdb
@@ -8,7 +10,7 @@ print("Content-Type: text/html\n")
 
 def entryPoint():
 	form = cgi.FieldStorage()
-    #diag print(form)
+    print(form)
 
     db = MySQLdb.connect(host="localhost", # your host, usually localhost
                      user="daniel", # your username
