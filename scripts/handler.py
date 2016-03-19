@@ -52,7 +52,7 @@ def getSupplierNamePhoto(dbObj, form):
     userData = dbObj.fetchall()
 
     print("""<img class="thumbnail" src="%s" style="display: inline-block; margin-right:20px">
-    <h1 style="display: inline-block;" id="supplierName">%s</h1>""" % (userData[0], userData[1]))
+    <h1 style="display: inline-block;" id="supplierName">%s</h1>""" % (userData[0][0], userData[0][1]))
 
 def getSupplierDescription(dbObj, form):
     print("Hi")
