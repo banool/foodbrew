@@ -27,7 +27,7 @@ def entryPoint():
             if info == False:
                 # Exiting if it didn't work properly.
                 exit()
-            else:
+            elif:
                 makeQuery(dbObj, info)
             else:
                 print("An unexpected request was received, exiting.")
