@@ -11,28 +11,6 @@
   <link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
-  <script>
-  /* This script here enables the ajax response. Whatever is returned will
-   appear at the id tag specified after target. */
-  // prepare the form when the DOM is ready
-  $(document).ready(function() {
-    // bind form using ajaxForm
-    $('#loginForm').ajaxForm({
-        // target identifies the element(s) to update with the server response
-        target: '#replaceTarget',
-
-        // success identifies the function to invoke when the server response
-        // has been received; here we apply a fade-in effect to the new content
-        success: function() {
-            $('#replaceTarget').fadeIn('slow');
-            //$('#entryForm').each(function() {
-                //this.reset();
-            //});
-        }
-    });
-  });
-  </script>
-
 </head>
 <body>
 
