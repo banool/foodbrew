@@ -40,7 +40,13 @@ def entryPoint():
 def loginForm(dbObj):
     print("Hey IT'S ME!!")
 
+
 def getSupplierGrid(dbObj):
-    print("Dis is da grid")
+    dbObj.execute("SELECT name, image FROM User")
+    userData = dbObj.fetchall()
+
+    for item in userData:
+        square = """<div class="column"><img class="thumbnail" src="http://placehold.it/550x550"><h5>%s</h5></div> """ % item[0]
+        print(square)
 
 entryPoint()
