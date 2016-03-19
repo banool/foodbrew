@@ -36,6 +36,14 @@ def entryPoint():
 
         db.commit()
 
+          <div class="column">
+          <a data-open="exampleModal1">
+            <img class="thumbnail" src="http://placehold.it/550x550">
+            <h5><div id="supplierGridTarget"></div></h5>
+          </a>
+          </div>
+
+
 def loginForm(dbObj):
     print("Hey IT'S ME!!")
 
@@ -45,8 +53,12 @@ def getSupplierGrid(dbObj):
     userData = dbObj.fetchall()
 
     for item in userData:
-        square = """<div class="column"><img class="thumbnail" width=450px height=450px src="%s"><h5 style="text-align:center">%s</h5></div> """ % (item[1], item[0])
-        print(square)
+        square = """<div class="column">
+        <a data-open="exampleModal1">
+        <div class="column">
+        <img class="thumbnail" width=450px height=450px src="%s">
+        <h5 style="text-align:center">%s</h5></div> """ % (item[1], item[0])
+        print(square*7)
 
 def getSupplierName(dbObj):
     print("Hi")
