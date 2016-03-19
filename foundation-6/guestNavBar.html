@@ -16,10 +16,17 @@ a {
       <form id="loginForm" action="/handler" method="post">
         <ul class="menu">
           <input type="hidden" name="action" value="loginData" />
+
           <li><input type="email" placeholder="Email"></li>
           <li><input type="password" placeholder="Password"></li>
-          <li><button type="submit" class="button">Login</button></li>
-        
+          <li><input type="button" class="button" onclick="submitFunction()" value="Login"></li>
+          
+          <script>
+            function submitFunction() {
+                document.getElementById("loginForm").submit();
+            }
+          </script>
+
         </ul>
       </form>
     </div>
