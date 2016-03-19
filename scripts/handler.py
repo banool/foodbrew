@@ -2,7 +2,7 @@ import cgitb, cgi
 cgitb.enable()
 import MySQLdb
 from sys import exit
-MYSQL_pwd="pass1234s"
+MYSQL_pwd="pass1234"
 
 print("Content-Type: text/html\n")
 
