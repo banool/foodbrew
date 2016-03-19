@@ -58,7 +58,7 @@ def getSupplierGrid(dbObj):
         <div class="column">
         <img class="thumbnail" width=450px height=450px src="%s">
         <h5 style="text-align:center">%s</h5></div> """ % (item[1], item[0])
-        print(square*7)
+        print(square)
 
 def getSupplierName(dbObj):
     print("Hi")
