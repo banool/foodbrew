@@ -2,7 +2,7 @@ import cgitb, cgi
 cgitb.enable()
 import MySQLdb
 from sys import exit
-MYSQL_pwd="stratakis5991"
+MYSQL_pwd="pass1234s"
 
 print("Content-Type: text/html\n")
 
@@ -13,7 +13,7 @@ def entryPoint():
     db = MySQLdb.connect(host="localhost", # your host, usually localhost
                      user="daniel", # your username
                       passwd=MYSQL_pwd, # your password
-                      db="mph_lookup") # name of the data base
+                      db="fft") # name of the data base
     dbObj = db.cursor()
 
     # Ascertaining what action we're meant to perform
@@ -40,5 +40,8 @@ def entryPoint():
         print("<p>Go back to the <a href='Insert Page and try again :)")
 
     db.commit()
+
+def loginForm():
+	print("Hey IT'S ME")
 
 entryPoint()
