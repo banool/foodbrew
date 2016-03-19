@@ -20,12 +20,20 @@
   <!-- Image and name of the supplier -->
   <div class="row">
     <img class="thumbnail" src="http://placehold.it/150x150" style="display: inline-block; margin-right:20px">
-    <h1 style="display: inline-block;">Company Name</h1></div>
+    <h1 style="display: inline-block;" id="supplierName">Company Name</h1>
   </div>
+
+  <script>
+  $(document).ready(function(){
+      $.get("/handler", {action: "getSupplierName"}, function(data, status){
+          document.getElementById("supplierName").innerHTML=data;
+      });
+  });
+  </script>
 
   <!-- Description of the company -->
   <div class="row" style="margin-top:10px">
-    <p style="font-size:120%">This is my super fine and dandy company dsecription. Look at me I am the best company in the whole entire universe because I am participating in this great and innovative program. Distributing food that would've been thrown out to those who need it through this super awesome web service is amazing. I love Food for Thought &#9786;.</p>
+    <p style="font-size:120%" id="companyDescription">This is my super fine and dandy company dsecription. Look at me I am the best company in the whole entire universe because I am participating in this great and innovative program. Distributing food that would've been thrown out to those who need it through this super awesome web service is amazing. I love Food for Thought &#9786;.</p>
   </div>
 
   <!-- Shows the pledges -->

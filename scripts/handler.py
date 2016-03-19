@@ -41,11 +41,14 @@ def loginForm(dbObj):
 
 
 def getSupplierGrid(dbObj):
-    dbObj.execute("SELECT name FROM User")
+    dbObj.execute("SELECT name, photo FROM User")
     userData = dbObj.fetchall()
 
     for item in userData:
-        square = """<div class="column"><img class="thumbnail" src="http://placehold.it/550x550"><h5>%s</h5></div> """ % item[0]
+        square = """<div class="column"><img class="thumbnail" src="%s"><h5>%s</h5></div> """ % (item[1], item[0])
         print(square)
+
+def getSupplierName(dbObj):
+
 
 entryPoint()
