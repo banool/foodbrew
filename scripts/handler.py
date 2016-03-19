@@ -12,10 +12,7 @@ def entryPoint():
 	form = cgi.FieldStorage()
 	print(form)
 
-    db = MySQLdb.connect(host="localhost", # your host, usually localhost
-                     user="daniel", # your username
-                      passwd=MYSQL_pwd, # your password
-                      db="fft") # name of the data base
+    db = MySQLdb.connect(host="localhost", user="daniel", passwd=MYSQL_pwd, db="fft")
     dbObj = db.cursor()
 
     # Ascertaining what action we're meant to perform
