@@ -17,7 +17,7 @@ a {\
     <div class="top-bar-right" id="replaceTarget" style="transform: translate(0%,10%);">\
       <form id="loginForm" action="/handler" method="post">\
         <ul class="menu">\
-          <input type="hidden" name="action" value="loginData" />\
+          <input type="hidden" name="action" value="login" />\
 \
           <li><input type="email" placeholder="Email" name="email"></li>\
           <li><input type="password" placeholder="Password" name="password"></li>\
