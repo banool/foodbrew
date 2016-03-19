@@ -40,4 +40,4 @@ def entryPoint():
 def loginForm(dbObj):
     print("Hey IT'S ME")
 
-    entryPoint()
+entryPoint()
