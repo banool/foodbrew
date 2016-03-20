@@ -70,6 +70,10 @@ def getSupplierGrid(dbObj):
 def getCollectorGrid3(dbObj, form):
     supplierID = form["supplierID"].value
 
+    dbObj.execute("""SELECT user_id FROM Collector""")
+    userData = dbObj.fetchall()
+    print(len(userData))
+
     dbObj.execute("SELECT user_id, name, photo FROM User WHERE user_id IN (SELECT collector_id FROM Collector) LIMIT 3")
     userData = dbObj.fetchall()
 
