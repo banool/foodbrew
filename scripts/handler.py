@@ -37,7 +37,7 @@ def entryPoint():
         db.commit()
 
 def loginForm(dbObj):
-    print("Hey IT'S ME!!")
+    print("<li><a href='#'>Profile</a></li>")
 
 
 def getSupplierGrid(dbObj):
