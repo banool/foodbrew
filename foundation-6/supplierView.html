@@ -56,10 +56,13 @@
   <div class="row" style="margin-top:10px">
     <h2>Pledges</h2>
   </div>
+
+  <div id="charitiesGrid3"></div>
+
   <script>
   $(document).ready(function(){
-      $.get("/handler", {action: "getSupplierGrid3"}, function(data, status){
-          document.getElementById("supplierGridTarget").innerHTML=data;
+      $.get("/handler", {action: "getCollectorsGrid3"}, function(data, status){
+          document.getElementById("charitiesGrid3").innerHTML=data;
       });
   });
   </script>
