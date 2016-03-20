@@ -43,25 +43,26 @@
   <!-- This is the first main div with the Read More and background image -->
   <div class="bgimg">
     <div class="row">
-      <h1 id="CTA1"><b>Start thinking today</b></h1>
+      <h1 id="CTA1"><b>Become a Thinker today</b></h1>
       <h3 id="CTA2">Donate your surplus food for those in need.</h3>
-      <a href="#info"><button id="CTA3" class="secondary button"><b>How It Works</b></button></a>
+      <a href="#info"><button id="CTA3" class="secondary button" style="transform: translate(-150px,-20px);display: inline-block;" ><b>How It Works</b></button></a>
+      <a href="learn-more.html"><button id="CTA3" class="secondary button" style="transform: translate(0px,-20px);display: inline-block;"><b>Learn More  </b></button></a>
     </div>
   </div>
 
   <div class="off-canvas-wrapper grid-content">
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
         <!-- <div class="callout float-center"> -->
-          <div class="row connect-row">
-            <h1 class="connect-text">Connect with a local Thinker...</h1>
+          <div class="row">
+            <h1 class="connect-text" style="margin-bottom:50px;text-align:center">See who participates near you...</h1>
           </div>
         <!-- </div> -->
         <div class="row small-up-2 medium-up-3 large-up-4">
-        <div id="supplierGridTarget"></div>
+        <div id="allUsersGridTarget"></div>
         <script>
         $(document).ready(function(){
-            $.get("/handler", {action: "getSupplierGrid"}, function(data, status){
-                document.getElementById("supplierGridTarget").innerHTML=data;
+            $.get("/handler", {action: "getAllUsersGrid"}, function(data, status){
+                document.getElementById("allUsersGridTarget").innerHTML=data;
             });
         });
         </script>
@@ -90,48 +91,20 @@
             </div>
           </div>
         </div>
-        <!-- <hr> -->
-        <!-- <div class="row">
-          <div class="medium-6 columns">
-            <h3>Contact Me</h3>
-            <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor.</p>
-            <ul class="menu">
-              <li><a href="#">Dribbble</a></li>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Yo</a></li>
-            </ul>
-          </div>
-          <div class="medium-6 columns">
-            <label>Name
-              <input type="text" placeholder="Name">
-            </label>
-            <label>Email
-              <input type="text" placeholder="Email">
-            </label>
-            <label>
-              Message
-              <textarea placeholder="holla at a designerd"></textarea>
-            </label>
-            <input type="submit" class="button expanded" value="Submit">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
 
   <footer class="footer">
       <div class="row">
         <div class="small-12 columns">
-          <p class="slogan">Finger-lickin' good</p>
+          <p class="slogan">Start thinking today</p>
           <p class="links">
             <a href="#">Home</a>
             <a href="#">Blog</a>
             <!-- <a href="#">Pricing</a> -->
-            <a href="#">About</a>
+            <a href="learn-more.html">About</a>
             <a href="#">FAQ</a>
             <a href="#">Contact</a>
           </p>
-          <p class="copywrite">Copywrite not copypwrite © 2015</p>
+          <p class="copywrite">Copyright © 2016</p>
         </div>
       </div>
     </footer>

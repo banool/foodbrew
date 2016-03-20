@@ -25,8 +25,12 @@ def entryPoint():
             getSupplierNamePhoto(dbObj, form)
         elif action == "getSupplierDescription":
             getSupplierDescription(dbObj, form)
-        elif action == "getCollectorsGrid3":
-            getCollectorsGrid3(dbObj)
+        elif action == "getCollectorGrid3":
+            getCollectorGrid3(dbObj, form)
+        elif action == "getCollectorGrid":
+            getCollectorGrid3(dbObj, form)
+        elif action == "getAllUsersGrid":
+            getAllUsersGrid(dbObj)
         else:
             print("???")
     except KeyError:
@@ -37,8 +41,23 @@ def entryPoint():
         db.commit()
 
 def loginForm(dbObj):
-    print("Hey IT'S ME!!")
+    print("""<ul class="menu"> <li><a href="#">Profile</a></li> </ul>""")
 
+
+def getAllUsersGrid(dbObj):
+    dbObj.execute("SELECT user_id, name, photo FROM User WHERE user_id IN (SELECT supplier_id FROM Supplier);")
+    userData = dbObj.fetchall()
+
+    for item in userData:
+        square = """<div class="column"><a href="/thinkers?id=%s"><img class="thumbnail" width=450px height=450px src="%s"><h5 style="text-align:center"><b>Thinker: &nbsp;</b>%s</h5></div> """ % (item[0], item[2], item[1])
+        print(square)
+
+    dbObj.execute("SELECT user_id, name, photo FROM User WHERE user_id IN (SELECT collector_id FROM Collector);")
+    userData = dbObj.fetchall()
+
+    for item in userData:
+        square = """<div class="column"><a href="/thinkers?id=%s"><img class="thumbnail" width=450px height=450px src="%s"><h5 style="text-align:center"><b>Charity: &nbsp;</b>%s</h5></div> """ % (item[0], item[2], item[1])
+        print(square)
 
 def getSupplierGrid(dbObj):
     dbObj.execute("SELECT user_id, name, photo FROM User WHERE user_id IN (SELECT supplier_id FROM Supplier);")
@@ -48,8 +67,25 @@ def getSupplierGrid(dbObj):
         square = """<div class="column"><a href="/thinkers?id=%s"><img class="thumbnail" width=450px height=450px src="%s"><h5 style="text-align:center">%s</h5></div> """ % (item[0], item[2], item[1])
         print(square*7)
 
-def getCollectorsGrid3(dbObj):
+def getCollectorGrid3(dbObj, form):
+    supplierID = form["supplierID"].value
+
+    dbObj.execute("""SELECT user_id FROM Collector""")
+    userData = dbObj.fetchall()
+    print(len(userData))
+    
+
     dbObj.execute("SELECT user_id, name, photo FROM User WHERE user_id IN (SELECT collector_id FROM Collector) LIMIT 3")
+    userData = dbObj.fetchall()
+
+    for item in userData:
+        square = """<div class="column"><a href="/thinkers?id=%s"><img class="thumbnail" width=250px height=250px src="%s"><h5 style="text-align:center">%s</h5></div> """ % (item[0], item[2], item[1])
+        print(square)
+
+def getCollectorGrid(dbObj, form):
+    supplierID = form["supplierID"].value
+
+    dbObj.execute("SELECT user_id, name, photo FROM User WHERE user_id IN (SELECT collector_id FROM Collector)")
     userData = dbObj.fetchall()
 
     for item in userData:
