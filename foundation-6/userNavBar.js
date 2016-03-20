@@ -17,8 +17,8 @@ a {\
     <div class="top-bar-left">\
       <ul class="menu">\
         <li><a href="index.html">Home</a></li>\
-        <li><a href="#">Pledges</a></li>\
-        <li><a href="#">Explore</a></li>\
+        <li><a href="pledge.html">Pledges</a></li>\
+        <li><a href="explore.html">Explore</a></li>\
       </ul>\
     </div>\
     <div class="top-bar-section" style="transform: translate(-100px,0%);display: inline-block;">\
