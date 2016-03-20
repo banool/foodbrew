@@ -48,7 +48,7 @@ def getSupplierGrid(dbObj):
         square = """<div class="column"><a href="/thinkers?id=%s"><img class="thumbnail" width=450px height=450px src="%s"><h5 style="text-align:center">%s</h5></div> """ % (item[0], item[2], item[1])
         print(square*7)
 
-def getCollectorsGrid3(dbObj):
+def getCollectorGrid(dbObj):
     dbObj.execute("SELECT user_id, name, photo FROM User WHERE user_id IN (SELECT collector_id FROM Collector) LIMIT 3")
     userData = dbObj.fetchall()
 
