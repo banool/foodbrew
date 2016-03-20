@@ -28,7 +28,7 @@ def entryPoint():
         elif action == "getCollectorGrid3":
             getCollectorGrid3(dbObj, form)
         elif action == "getCollectorGrid":
-            getCollectorGrid3(dbObj, form)
+            getCollectorGrid(dbObj, form)
         elif action == "getAllUsersGrid":
             getAllUsersGrid(dbObj)
         else:
