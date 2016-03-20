@@ -45,6 +45,22 @@
     <div class="row">
       <h1 id="CTA1"><b>Become a Thinker today</b></h1>
       <h3 id="CTA2">Donate your surplus food for those in need.</h3>
+
+      <script>
+      $(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html, body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });</script>
       <a href="#info"><button id="CTA3" class="secondary button" style="transform: translate(-150px,-20px);display: inline-block;" ><b>How It Works</b></button></a>
       <a href="learn-more.html"><button id="CTA3" class="secondary button" style="transform: translate(0px,-20px);display: inline-block;"><b>Learn More  </b></button></a>
     </div>
