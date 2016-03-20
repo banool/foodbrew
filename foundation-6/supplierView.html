@@ -56,9 +56,9 @@
   <div class="row" style="margin-top:10px">
     <h2>Pledges</h2>
   </div>
-
-  <div id="charitiesGrid3"></div>
-
+  <div class="row small-up-2 medium-up-3 large-up-4">
+    <div id="charitiesGrid3"></div>
+  </div>
   <script>
   $(document).ready(function(){
       $.get("/handler", {action: "getCollectorsGrid3"}, function(data, status){

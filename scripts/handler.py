@@ -53,7 +53,7 @@ def getCollectorsGrid3(dbObj):
     userData = dbObj.fetchall()
 
     for item in userData:
-        square = """<div class="column"><a href="/thinkers?id=%s"><img class="thumbnail" width=150px height=150px src="%s"><h5 style="text-align:center">%s</h5></div> """ % (item[0], item[2], item[1])
+        square = """<div class="column"><a href="/thinkers?id=%s"><img class="thumbnail" width=250px height=250px src="%s"><h5 style="text-align:center">%s</h5></div> """ % (item[0], item[2], item[1])
         print(square)
 
 def getSupplierNamePhoto(dbObj, form):
