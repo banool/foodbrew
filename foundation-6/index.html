@@ -58,11 +58,11 @@
           </div>
         <!-- </div> -->
         <div class="row small-up-2 medium-up-3 large-up-4">
-        <div id="supplierGridTarget"></div>
+        <div id="allUsersGridTarget"></div>
         <script>
         $(document).ready(function(){
-            $.get("/handler", {action: "getSupplierGrid"}, function(data, status){
-                document.getElementById("supplierGridTarget").innerHTML=data;
+            $.get("/handler", {action: "getAllUsersGrid"}, function(data, status){
+                document.getElementById("allUsersGridTarget").innerHTML=data;
             });
         });
         </script>
