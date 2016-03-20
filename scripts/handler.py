@@ -27,7 +27,7 @@ def entryPoint():
             getSupplierDescription(dbObj, form)
         elif action == "getCollectorsGrid3":
             getCollectorsGrid3(dbObj)
-        elif action == "allUsersGrid":
+        elif action == "getAllUsersGrid":
             getAllUsersGrid(dbObj)
         else:
             print("???")
