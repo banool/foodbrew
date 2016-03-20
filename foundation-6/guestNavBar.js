@@ -11,7 +11,7 @@ a {\
     <a href="index.html"><div class="top-bar-left">\
       <ul class="dropdown menu" data-dropdown-menu>\
         <li class="img"><img style="height:70%" src="img/fft_minimal3_50px.png"></li>\
-        <li class="menu-text" style="font-size: 22pt;">Food for Thought</li>\
+        <li class="menu-text" style="font-size: 22pt;">Food For Thought</li>\
       </ul>\
     </div></a>\
     <div class="top-bar-right" id="replaceTarget" style="transform: translate(0%,10%);">\
