@@ -16,8 +16,9 @@
 }
 
 .log-in-form {
-	border: 1px solid #cacaca;
-	padding: 1rem;
+	/*border: 1px solid #cacaca;*/
+	border: none;
+/*	padding: 1rem;
 	border-radius: 3px;
 	margin: 0;
 	position: absolute;
@@ -25,9 +26,8 @@
 	left: 50%;
 	margin-right: -50%;
 	transform: translate(-50%, -50%);
-	max-width: 350px;
-	background-color: white;
-
+	max-width: 350px;*/
+	background-color: white;	
 }
 
 .bgimg {
