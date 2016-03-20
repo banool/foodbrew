@@ -1,0 +1,94 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Food For Thought</title>
+  <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+  <link rel="stylesheet" href="css/app.css" />
+  <link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
+  <script src="assets/jquery.js"></script>
+  <script src="assets/jquery.form.js"></script>ç
+
+  <script>
+  /* This script here enables the ajax response. Whatever is returned will
+   appear at the id tag specified after target. */
+  // prepare the form when the DOM is ready
+  $(document).ready(function() {
+    // bind form using ajaxForm
+    $('#loginForm').ajaxForm({
+        // target identifies the element(s) to update with the server response
+        target: '#replaceTarget',
+
+        // success identifies the function to invoke when the server response
+        // has been received; here we apply a fade-in effect to the new content
+        success: function() {
+            $('#replaceTarget').fadeIn('slow');
+            //$('#entryForm').each(function() {
+                //this.reset();
+            //});
+        }
+    });
+  });
+  </script>
+
+  <script> 
+    $(function(){
+      $("#includeMap").load("Map4Collectors.html"); 
+    });
+  </script> 
+
+</head>
+
+
+
+
+<body>
+
+  <!-- This is the top navbar -->
+  <script src="guestNavBar.js"></script>
+ 
+
+ <div id="includeMap"></div>
+
+  <div class="row">
+    <div class="buttons-1" style="margin-top:100px;height:300px;">
+    <div class="medium-2 medium-offset-4 column">
+      <a href="thinkers.html" class="warning button" style="display:inline">See all Thinkers</a>
+    </div>
+    <div class="medium-6 column">
+      <a href="charities.html" class="warning button" style="display:inline">See all Charities</a>
+    </div>
+  </div>
+</div>
+
+  <footer class="footer">
+      <div class="row">
+        <div class="small-12 columns">
+          <p class="slogan">Start thinking today</p>
+          <p class="links">
+            <a href="#">Home</a>
+            <a href="#">Blog</a>
+            <!-- <a href="#">Pricing</a> -->
+            <a href="learn-more.html">About</a>
+            <a href="#">FAQ</a>
+            <a href="#">Contact</a>
+          </p>
+          <p class="copywrite">Copyright © 2016</p>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/3.2.5/javascripts/jquery.foundation.orbit.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>
