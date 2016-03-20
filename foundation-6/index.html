@@ -1,46 +1,44 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Food for Thought</title>
+  <title>Food For Thought</title>
   <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
   <link rel="stylesheet" href="css/app.css" />
   <link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
+  <script src="assets/jquery.js"></script>
+  <script src="assets/jquery.form.js"></script>
+
+  <script>
+  /* This script here enables the ajax response. Whatever is returned will
+   appear at the id tag specified after target. */
+  // prepare the form when the DOM is ready
+  $(document).ready(function() {
+    // bind form using ajaxForm
+    $('#loginForm').ajaxForm({
+        // target identifies the element(s) to update with the server response
+        target: '#replaceTarget',
+
+        // success identifies the function to invoke when the server response
+        // has been received; here we apply a fade-in effect to the new content
+        success: function() {
+            $('#replaceTarget').fadeIn('slow');
+            //$('#entryForm').each(function() {
+                //this.reset();
+            //});
+        }
+    });
+  });
+  </script>
+
 </head>
 <body>
 
-<!-- This is the top navbar -->
-  <div class="top-bar">
-    <div class="row">
-      <div class="top-bar-left">
-        <ul class="dropdown menu" data-dropdown-menu>
-          <li ckass="img"><img style="height:70%" src="img/fft_minimal3_50px.png"></li>
-          <li class="menu-text" style="font-size: 22pt;">Food for Thought</li>
-          <!--
-          <li class="has-submenu">
-            <a href="#">One</a>
-            <ul class="submenu menu vertical" data-submenu>
-              <li><a href="#">One</a></li>
-              <li><a href="#">Two</a></li>
-              <li><a href="#">Three</a></li>
-            </ul>
-          </li>
-
-          <li><a href="#">Two</a></li>
-          <li><a href="#">Three</a></li>
-          -->
-        </ul>
-      </div>
-      <div class="top-bar-right" style="transform: translate(0%,10%);">
-        <ul class="menu">
-          <li><input type="email" placeholder="Username"></li>
-          <li><input type="password" placeholder="Password"></li>
-          <li><button type="button" class="button">Login</button></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <!-- This is the top navbar -->
+  <script src="guestNavBar.js"></script>
  
   <!-- This is the first main div with the Read More and background image -->
   <div class="bgimg">
@@ -54,84 +52,44 @@
   <div class="off-canvas-wrapper grid-content">
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
         <!-- <div class="callout float-center"> -->
-          <div class="row">
-            <h1>Connect with a local Thinker...</h1>
+          <div class="row connect-row">
+            <h1 class="connect-text">Connect with a local Thinker...</h1>
           </div>
         <!-- </div> -->
         <div class="row small-up-2 medium-up-3 large-up-4">
-          <div class="column">
-          <a data-open="exampleModal1">
-            <img class="thumbnail" src="http://placehold.it/550x550">
-            <h5>My Site</h5>
-          </a>
-          </div>
-          <div class="column squareBox">
-          <!-- <div class="column squareBox"> -->
-          
-            <img class="thumbnail" src="http://placehold.it/400x400">
-            <h5>My Site</h5>
-          </div>
-          <div class="column">
-            <img class="thumbnail" src="http://placehold.it/550x550">
-            <h5>My Site</h5>
-          </div>
-          <div class="column">
-            <img class="thumbnail" src="http://placehold.it/550x550">
-            <h5>My Site</h5>
-          </div>
-          <div class="column">
-            <img class="thumbnail" src="http://placehold.it/550x550">
-            <h5>My Site</h5>
-          </div>
-          <div class="column">
-            <img class="thumbnail" src="http://placehold.it/550x550">
-            <h5>My Site</h5>
-          </div>
-          <div class="column">
-            <img class="thumbnail" src="http://placehold.it/550x550">
-            <h5>My Site</h5>
-          </div>
-          <div class="column">
-            <img class="thumbnail" src="http://placehold.it/550x550">
-            <h5>My Site</h5>
-          </div>
-          <div class="column">
-            <img class="thumbnail" src="http://placehold.it/550x550">
-            <h5>My Site</h5>
-          </div>
-          <div class="column">
-            <img class="thumbnail" src="http://placehold.it/550x550">
-            <h5>My Site</h5>
-          </div>
-          <div class="column">
-            <img class="thumbnail" src="http://placehold.it/550x550">
-            <h5>My Site</h5>
-          </div>
-          <div class="column">
-            <img class="thumbnail" src="http://placehold.it/550x550">
-            <h5>My Site</h5>
-          </div>
+        <div id="supplierGridTarget"></div>
+        <script>
+        $(document).ready(function(){
+            $.get("/handler", {action: "getSupplierGrid"}, function(data, status){
+                document.getElementById("supplierGridTarget").innerHTML=data;
+            });
+        });
+        </script>
         </div>
 
-                  <div id="info">
+        <div id="info">
         <div class="row">
             <div class="hiw-content">
             <div class="medium-4 columns">
+              <i class="fi-heart hiw-icon"></i>
               <h3>Donate Food</h3>
-              <p>Use our application to notify charities of surplus food availability.</p>
+              <p>Use our service to notify of surplus food availability.</p>
             </div>
             <div class="medium-4 columns">
-              <h3>Engage With Community</h3>
-              <p>Let your customers know the impact of your contributions.</p>
+              <i class="fi-torsos-all hiw-icon"></i>
+              <h3>Support Your Community</h3>
+              <p>Let your customers see the impact of your contributions.</p>
+              <p>Form a pledge with your local charities</p>
+
             </div>
             <div class="medium-4 columns">
+              <i class="fi-trees hiw-icon"></i>
               <h3>Protect The Environment</h3>
-              <p>Use our application to notify charities of surplus food availability.</p>
+              <p>Think today about over-consumption tomorrow.</p>
             </div>
             </div>
           </div>
         </div>
-
         <!-- <hr> -->
         <!-- <div class="row">
           <div class="medium-6 columns">
@@ -168,9 +126,9 @@
           <p class="links">
             <a href="#">Home</a>
             <a href="#">Blog</a>
-            <a href="#">Pricing</a>
+            <!-- <a href="#">Pricing</a> -->
             <a href="#">About</a>
-            <a href="#">Faq</a>
+            <a href="#">FAQ</a>
             <a href="#">Contact</a>
           </p>
           <p class="copywrite">Copywrite not copypwrite © 2015</p>
@@ -224,7 +182,7 @@
 
 
 
-  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <!--<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>-->
   <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/3.2.5/javascripts/jquery.foundation.orbit.js"></script>
   <script>
