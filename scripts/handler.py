@@ -73,7 +73,7 @@ def getCollectorGrid3(dbObj, form):
     dbObj.execute("""SELECT user_id FROM Collector""")
     userData = dbObj.fetchall()
     print(len(userData))
-    print(len(userData[0]))
+    
 
     dbObj.execute("SELECT user_id, name, photo FROM User WHERE user_id IN (SELECT collector_id FROM Collector) LIMIT 3")
     userData = dbObj.fetchall()
