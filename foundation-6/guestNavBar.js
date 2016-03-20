@@ -38,7 +38,6 @@ a {\
 </div>\
 \
 <body>\
-\
 <!-- <p><a data-open="exampleModal1">Click me for a modal</a></p> -->\
   <!-- Modals -->\
 \
@@ -88,14 +87,14 @@ a {\
   </button> -->\
 </div>\
 \
-  <!-- Scripts -->\
+  <!-- Scripts \
 \
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>\
-      <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>\
-  \
+      <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>-->\
+  <!-- \
   <script>\
     $(document).foundation();\
-  </script>\
+  </script> -->\
 \
 </body>\
 \
