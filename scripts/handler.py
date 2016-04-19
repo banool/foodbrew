@@ -2,16 +2,19 @@
 
 import cgitb, cgi
 cgitb.enable()
+
 import MySQLdb
 from sys import exit
+
 MYSQL_pwd="pass1234"
+username = "daniel"
 
 print("Content-Type: text/html\n")
 
 def entryPoint():
     form = cgi.FieldStorage()
     
-    db = MySQLdb.connect(host="localhost", user="daniel", passwd=MYSQL_pwd, db="fft")
+    db = MySQLdb.connect(host="localhost", user=username, passwd=MYSQL_pwd, db="fft")
     dbObj = db.cursor()
 
     # Ascertaining what action we're meant to perform
