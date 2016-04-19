@@ -29,6 +29,7 @@ The website is composed of three main components.
 - MySQL database containing information related to users, agreements, chatting, etc.
 
 The database itself is not in the repo at this point, but the way it is interacted with can be seen in handler.py.
+An early physical design can be seen [here](https://www.dropbox.com/s/ew08qykyukjhhqb/early_database_physical_design.jpg?dl=0).
 
 ## Viability
 Ideologically, this solution has benefits for both parties.
