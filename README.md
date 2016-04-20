@@ -8,17 +8,17 @@ The main objective of our solution is to provide a platform that connects food s
 This is in the hope that they can form long term agreements with each other.
 
 ### Basic functionality
-The web service provides separate functionality for suppliers (thinkers) and collectors (charities). Each of these can then look for nearby users of the alternate type either with a list or using a Google map interface.
-Once a user finds someon an organisation that they think could be appropriate, a chat interface is supplied so that they can organise an arrangement.
+The web service provides separate functionality for suppliers (thinkers) and collectors (charities). Each of these can then look for nearby users of the alternate type either with a list or using a Google Maps interface.
+Once a user finds an organisation that they think could be appropriate for them, a chat interface is supplied so that they can organise an arrangement.
 Each organisiation has a full size splash page that shows who they have an agreement with.
 The splash page is designed such that it provides (specifically to a corporate supplier) an attractive demonstration of that company's social conscious.
 
 ### Directory structure
 Considering that this project was made in under 48 hours, the directory structure is a bit of a mess. As such, some unused ideas and code have been dumped into folders instead of removed or repurposed.
 
-- **www** Contains the html, javascript and [Foundation](http://foundation.zurb.com/) code for the front end, as well as all image assets.
-- **scripts** Contains the python script that handles incoming HTTP GET requests.
-- **map_samples** Contains working files for the google maps geolocation component contributed by [ChrisLinn](https://github.com/ChrisLinn).
+- **www** Contains the HTML, JavaScript and [Foundation](http://foundation.zurb.com/) code for the front end, as well as all image assets.
+- **scripts** Contains the Python script that handles incoming HTTP GET requests.
+- **map_samples** Contains working files for the Google Maps geolocation component contributed by [ChrisLinn](https://github.com/ChrisLinn).
 - **old_go_stuff** Contains files from an early attempt at coding the site with Go. In the end we went with a jQuery -> Python -> MySQL setup.
 
 ## Tech implementation
@@ -37,9 +37,9 @@ From the charity side the benefits are obvious, namely being able to reliably co
 The service also offers benefits for the company. Standard procedure for most food suppliers (i.e. supermarkets) is to just throw food out at the end of the day.
 From their perspective, redistributing the subpar food to those who might want it holds no real profit or exposure benefits.
 However, if a charity were to instead come to pick up the food as they are going to throw it into the bins, this results in very little extra work on their behalf.
-Furthermore, the supplier can demonstrate to their consumers, using our service, that they are living up to their corporate resonsibility and that they have a social conscience.
+Furthermore, the supplier can demonstrate to their consumers, using our service, that they are living up to their corporate responsibility and that they have a social conscience.
 
-As a service provider, down the track we could charge suppliersa small fee for the right to say that they subscribe to our programme, similar to other food certification services like the [Heart Foundation Tick](http://heartfoundation.org.au/healthy-eating/heart-foundation-tick).
+As a service provider, down the track we could charge suppliers a small fee for the right to say that they subscribe to our program, similar to other food certification services like the [Heart Foundation Tick](http://heartfoundation.org.au/healthy-eating/heart-foundation-tick).
 
 ## More information
-Feel free to contact any of the contributors about the project :)
+Feel free to contact [me](https://github.com/banool) or any of the contributors about the project :)
