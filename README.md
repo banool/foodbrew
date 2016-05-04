@@ -19,7 +19,11 @@ Considering that this project was made in under 48 hours, the directory structur
 - **www** Contains the HTML, JavaScript and [Foundation](http://foundation.zurb.com/) code for the front end, as well as all image assets.
 - **scripts** Contains the Python script that handles incoming HTTP GET requests.
 - **map_samples** Contains working files for the Google Maps geolocation component contributed by [ChrisLinn](https://github.com/ChrisLinn).
+- **image_working_files** Contains any files used for creating images, logos or
+backgrounds that aren't in the actual website, like .psd files or unused versions
+of images. The final logos and splash background are in the root of this folder.
 - **old_go_stuff** Contains files from an early attempt at coding the site with Go. In the end we went with a jQuery -> Python -> MySQL setup.
+- **other** Contains a few other things made along the way.
 
 ## Tech implementation
 The website is composed of three main components.
