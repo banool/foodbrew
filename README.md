@@ -12,6 +12,7 @@ The web service provides separate functionality for suppliers (thinkers) and col
 Once a user finds an organisation that they think could be appropriate for them, a chat interface is supplied so that they can organise an arrangement.
 Each organisiation has a full size splash page that shows who they have an agreement with.
 The splash page is designed such that it provides (specifically to a corporate supplier) an attractive demonstration of that company's social conscious.
+The server is running over at [Digital Ocean](https://digitalocean.com).
 
 ### Directory structure
 Considering that this project was made in under 48 hours, the directory structure is a bit of a mess. As such, some unused ideas and code have been dumped into folders instead of removed or repurposed.
