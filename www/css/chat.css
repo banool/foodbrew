@@ -936,7 +936,7 @@ img {
       float: right;
       pointer-events: none;
       margin-top: -0.25em;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="32" viewBox="0 0 32 32"><path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zm6.906 8.875l2.219 2.031-12.063 13.281-6.188-6.188 2.125-2.125 3.938 3.938 9.969-10.938z" /></svg>'); }
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="https://www.w3.org/2000/svg" version="1.1" width="32" height="32" viewBox="0 0 32 32"><path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zm6.906 8.875l2.219 2.031-12.063 13.281-6.188-6.188 2.125-2.125 3.938 3.938 9.969-10.938z" /></svg>'); }
   .block-list .with-dropdown {
     color: inherit; }
     .block-list .with-dropdown select {
@@ -1849,7 +1849,7 @@ select {
   font-size: 1rem;
   color: #000;
   border-radius: 0;
-  background: #fafafa url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: #000"></polygon></svg>') right 10px center no-repeat;
+  background: #fafafa url('data:image/svg+xml;utf8,<svg xmlns="https://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: #000"></polygon></svg>') right 10px center no-repeat;
   background-size: 8px 8px; }
   select:hover {
     background-color: #f0f0f0; }
