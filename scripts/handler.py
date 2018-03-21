@@ -6,7 +6,7 @@ cgitb.enable()
 import MySQLdb
 from sys import exit
 
-MYSQL_pwd="pass1234"
+MYSQL_pwd="stratakis5991"
 username = "daniel"
 
 print("Content-Type: text/html\n")
@@ -52,14 +52,14 @@ def getAllUsersGrid(dbObj):
     userData = dbObj.fetchall()
 
     for item in userData:
-        square = """<div class="column"><a href="/thinkers?id=%s"><img class="thumbnail" width=450px height=450px src="%s"><h5 style="text-align:center"><b>Thinker: &nbsp;</b>%s</h5></div> """ % (item[0], item[2], item[1])
+        square = """<div class="column"><a href="/thinkers.html?id=%s"><img class="thumbnail" width=450px height=450px src="%s"><h5 style="text-align:center"><b>Thinker: &nbsp;</b>%s</h5></div> """ % (item[0], item[2], item[1])
         print(square)
 
     dbObj.execute("SELECT user_id, name, photo FROM User WHERE user_id IN (SELECT collector_id FROM Collector);")
     userData = dbObj.fetchall()
 
     for item in userData:
-        square = """<div class="column"><a href="/thinkers?id=%s"><img class="thumbnail" width=450px height=450px src="%s"><h5 style="text-align:center"><b>Charity: &nbsp;</b>%s</h5></div> """ % (item[0], item[2], item[1])
+        square = """<div class="column"><a href="/thinkers.html?id=%s"><img class="thumbnail" width=450px height=450px src="%s"><h5 style="text-align:center"><b>Charity: &nbsp;</b>%s</h5></div> """ % (item[0], item[2], item[1])
         print(square)
 
 def getSupplierGrid(dbObj):
@@ -67,7 +67,7 @@ def getSupplierGrid(dbObj):
     userData = dbObj.fetchall()
 
     for item in userData:
-        square = """<div class="column"><a href="/thinkers?id=%s"><img class="thumbnail" width=450px height=450px src="%s"><h5 style="text-align:center">%s</h5></div> """ % (item[0], item[2], item[1])
+        square = """<div class="column"><a href="/thinkers.html?id=%s"><img class="thumbnail" width=450px height=450px src="%s"><h5 style="text-align:center">%s</h5></div> """ % (item[0], item[2], item[1])
         print(square)
 
 def getCollectorGrid3(dbObj, form):
@@ -76,7 +76,7 @@ def getCollectorGrid3(dbObj, form):
     userData = dbObj.fetchall()
 
     for item in userData:
-        square = """<div class="column"><a href="/thinkers?id=%s"><img class="thumbnail" width=250px height=250px src="%s"><h5 style="text-align:center">%s</h5></div> """ % (item[0], item[2], item[1])
+        square = """<div class="column"><a href="/thinkers.html?id=%s"><img class="thumbnail" width=250px height=250px src="%s"><h5 style="text-align:center">%s</h5></div> """ % (item[0], item[2], item[1])
         print(square)
 
 def getCollectorGrid(dbObj, form):
@@ -86,7 +86,7 @@ def getCollectorGrid(dbObj, form):
     userData = dbObj.fetchall()
 
     for item in userData:
-        square = """<div class="column"><a href="/thinkers?id=%s"><img class="thumbnail" width=250px height=250px src="%s"><h5 style="text-align:center">%s</h5></div> """ % (item[0], item[2], item[1])
+        square = """<div class="column"><a href="/thinkers.html?id=%s"><img class="thumbnail" width=250px height=250px src="%s"><h5 style="text-align:center">%s</h5></div> """ % (item[0], item[2], item[1])
         print(square)
 
 def getSupplierNamePhoto(dbObj, form):
